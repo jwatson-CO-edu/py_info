@@ -3,5 +3,6 @@
 
 try:
     foo = 1/0
-except ZeroDivisionError as err: # you can use this feature to access the text of the error
+except BaseException as err: # you can store a reference to an exception to access its text
+	#  ^-- All exceptions inherit this one, useful if you want to print all errors
     print "You did a bad! , Msg: '" , err,"'"
