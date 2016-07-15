@@ -46,3 +46,12 @@ def add_recursive(*args):
         return args[0] + args[1]
         
 print add_recursive(1,2,3,4,5,6,7)
+
+def require_two_args(arg1, arg2, *moreArgs):
+    temp = arg1 + arg2
+    for arg in moreArgs:
+        temp += arg
+    return temp
+
+print require_two_args(1,2,3) # 6
+print require_two_args(1,2)   # 3 , the above handles the missing optional args list gracefully
