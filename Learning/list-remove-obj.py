@@ -1,3 +1,5 @@
+""" Remove an object from a list of objects by a reference to the object """
+
 class Thing:
     def __init__( self , num ):
         self.num = num

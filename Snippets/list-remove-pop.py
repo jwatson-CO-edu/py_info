@@ -5,6 +5,10 @@ class Thing:
 def find_pop( iterable , item ):
     """ Pop 'item' from 'iterable' , ValueError if not in 'iterable' """
     return iterable.pop( iterable.index( item ) )
+
+def str_remove( pStr , remStr ):
+    """ Remove all instances of 'remStr' from 'pStr' """
+    return pStr.replace( remStr , '' )
         
 thingList = [ Thing(i) for i in xrange( 10 ) ]
 print [ item.num for item in thingList ]
@@ -17,3 +21,5 @@ print [ item.num for item in thingList ]
 Found and popped 4
 [0, 1, 2, 3, 5, 6, 7, 8, 9]
 """
+
+print find_pop( "rr\nrr" , '\n' )
