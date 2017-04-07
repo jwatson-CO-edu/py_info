@@ -1,7 +1,21 @@
 # -*- coding: utf-8 -*-
 
+"""
+RESULTS
+1. Can access a class member via an object via 'self.__class__.MEMBERNAME' , so that you don't have to use the class name over and over
+"""
+
 def sep(title = ""):
     print "=======" + ' ' + title + ' ' + "======="
+
+class Xur(object):
+    thing = 1
+    
+    def __init__( self ):
+        pass
+    
+    def get_class_thing( self ):
+        return self.__class__.thing
 
 class TaggedObject(object):
     objName = "TaggedObject"
@@ -16,6 +30,9 @@ class Node(TaggedObject):
     # Note that __init__ is inherited from the parent class if it is not defined
     objName = "Node"   # 
     totalInstance = 0
+    
+gim = Xur()
+print gim.get_class_thing() # 1
     
 foo = TaggedObject()
 print foo.tag

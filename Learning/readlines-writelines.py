@@ -13,3 +13,4 @@ with open( 'testFile.txt' , 'r') as infile:
     with open( 'outFile2.txt' , 'w' ) as outfile:
         for line in infile: # Using this method, only one line of the file is ever in memory
             outfile.write( line ) # Here also, no extra newlines are added
+# With the above pattern, both 'infile' and 'outfile' will be automatically closed by python after the loops have exited
