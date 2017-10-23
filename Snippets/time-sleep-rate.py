@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 RESULT:
 """
@@ -19,8 +21,9 @@ class HeartRate: # NOTE: This fulfills a purpose similar to the rospy rate
         
 rate = HeartRate( 0.1 ) # Create a rate object with 0.1 Hz , period of 10s
 
-print time.time()
+last = time.time()
 rate.sleep()
-print time.time()
+print time.time() - last
+last = time.time()
 rate.sleep()
-print time.time()
+print time.time() - last
