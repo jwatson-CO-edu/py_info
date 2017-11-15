@@ -15,3 +15,7 @@ foo , bar , baz = get_those_nums()
 print foo , bar , baz # 7 8 9
 [ foo , bar , baz ] = get_those_nums()
 print foo , bar , baz # 7 8 9
+
+# Super Unpack!
+[ [ foo , bar , baz ] , [ xur , qua , gan ] , [ guh , wij , kli ] ] = [ [ 1 , 2 , 3 ] , [ 4 , 5 , 6 ] , [ 7 , 8 , 9 ] ]
+print foo , bar , baz , xur , qua , gan , guh , wij , kli # 1 2 3 4 5 6 7 8 9
