@@ -2,5 +2,7 @@
 *.pyc
 Learning/testFile.txt~
 Learning/PyTorch/data/*
+Learning/PyTorch/files/*
+Learning/PyTorch/results/*
 Learning/PyTorch/cifar_net.pth
 Learning/PyTorch/.ipynb_checkpoints/*
