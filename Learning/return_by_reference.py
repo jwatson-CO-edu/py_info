@@ -12,9 +12,9 @@ class RefTest:
         """ Return the dict """
         return self.secret
     
-foo = RefTest()
-bar = foo.get_dct()
+foo = RefTest() # --- Construct an object that contains a dictionary
+bar = foo.get_dct() # Fetch the dict
+bar['a'] = 5 # ------ Attempt to modify dict
 
-bar['a'] = 5
-
-print( foo.secret )
+print( foo.secret ) # {'a': 5, 'b': 2}
+# RESULT: Dict was modified, the member function returned a reference to the member object
